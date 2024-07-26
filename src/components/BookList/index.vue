@@ -4,29 +4,12 @@
     <view v-for="book in books" :key="book.id">
 
       <nut-card
-        :img="book.coverUrl"
-        :name="book.name"
-        :publicationTime="book.publicationTime"
-        :desc="book.desc"
+        :img-url="book.coverUrl"
+        :title="book.name"
+        :shop-name="book.desc"
+        :is-need-price="false"
       />
 
-
-      <view>
-        <image :src="book.coverUrl" alt="封面" mode="aspectFill"/>
-      </view>
-      <view>
-        <view>
-          <text>{{ book.name }}</text>
-        </view>
-        <view>
-          <text v-for="author in book.authorList">{{ author.name }} /</text>
-          <text v-for="pressName in book.pressNames">{{ pressName }} /</text>
-          <text>{{ book.publicationTime }}</text>
-        </view>
-        <view>
-          <text>{{ book.desc }}</text>
-        </view>
-      </view>
     </view>
 
   </view>
