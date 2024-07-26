@@ -9,6 +9,10 @@
         Count++
       </nut-button>
     </view>
+
+    <view>
+      <BookList />
+    </view>
   </view>
 </template>
 
